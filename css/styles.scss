@@ -94,9 +94,15 @@ body {
 }
 
 // HERO SECTION
+main {
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+}
 
 .container_hero {
-  max-width: 70%;
+  width: 70%;
   height: 200px;
   padding: 2 1.2rem;
   margin: 0 auto;
@@ -527,5 +533,157 @@ body {
   .footer__logo {
     grid-column: 9/10;
     width: 11vw;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 601px) {
+  .nav {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    max-width: fit-content;
+
+    &__links {
+      gap: 0.5rem;
+    }
+
+    &__buttons {
+      gap: 0.3rem;
+
+      button {
+        padding: 0.6rem 1rem;
+        font-size: 0.97em;
+      }
+    }
+  }
+
+  .container_hero {
+    max-width: 95%;
+    padding: 1.2rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.hero {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  text-align: center;
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__text {
+    font-size: 1rem;
+    max-width: 100%;
+    margin: 0 auto 2rem auto;
+  }
+
+  button {
+    padding: 1rem 2rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+  }
+
+  .hero__media-video {
+    max-width: 90%;
+    height: auto;
+    margin: 2rem auto 0 auto;
+    display: block;
+    border-radius: 6px;
+  }
+
+  .btn_media {
+    position: absolute;
+    right: 15%;
+    bottom: -1.5rem;
+    margin: 0;
+  }
+}
+
+.solutions {
+  padding: 3rem 1.5rem;
+  margin: 1rem auto;
+  max-width: 90%;
+
+  .solutions__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+.container_features .features {
+  max-width: 90%;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.features_image {
+  max-width: 80%;
+  margin: 1rem auto 0 auto;
+}
+
+.articles__cards {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  .articles__card {
+    max-width: 45%;
+    margin: 0 auto;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 98vw;
+  margin: 0 auto;
+  text-align: center;
+  grid-template-columns: none !important; // Remove grid para evitar conflitos
+
+  .footer__subscribe,
+  .footer__materials-products,
+  .footer__materials-resources,
+  .footer__logo {
+    width: 100%;
+    margin-bottom: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__subscribe-input,
+  .footer__subscribe-submit {
+    width: 90%;
+    margin: 0.3rem auto;
+    display: block;
+  }
+
+  .footer__materials-products,
+  .footer__materials-resources {
+    margin-bottom: 1rem;
+  }
+
+  .footer__logo {
+    width: 60vw;
+    max-width: 150px;
+    margin: 0 auto 1rem auto;
+    display: block;
   }
 }
